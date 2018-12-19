@@ -1,25 +1,12 @@
 <template>
+<v-app>
   <div id="app">
 	 <ul class="nav">
-	<!--  	<li><a href="">Home</a></li>
-	 	<li><a href="">Todo</a></li>
-
-	 	<li><a href="">About</a></li>
-	 	<li><a href="">FAQ</a></li>
-
-	 	<li><a href="">Test</a></li> -->
-        
 	 	<li><router-link :to="{ name: 'Home' }">Home</router-link></li>
 	 	<li><router-link :to="{ name: 'Todo' }">App</router-link></li>
 	 	<li v-if="!loggedIn"><router-link :to="{ name: 'Login' }">Login</router-link></li>
 	 	<li v-if="!loggedIn"><router-link :to="{ name: 'Register' }">Register</router-link></li>
 		<li v-if="loggedIn"><router-link :to="{ name: 'Logout' }">Logout</router-link></li>
-	 	<!-- <li><router-link :to="{}">Home</router-link></li>
-
-	 	<li><router-link :to="{}">Home</router-link></li>
-	 	<li><router-link :to="{}">Home</router-link></li> -->
-	 	
-
 	 </ul>
 	 <img src="@/assets/logo.png" class="logo">
 	 <transition 
@@ -57,6 +44,7 @@
       </v-btn>
 	 </v-snackbar>
   </div>
+</v-app>
 </template>
 
 
